@@ -13,6 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.get('/users', (req,res) => res.send('User Routes'));
-app.get('/notes', (req,res) => res.send('Notes Routes'));
+app.use('/users', require('./routes/users'));
+app.use('/tasks', require('./routes/tasks'));
 module.exports = app;
