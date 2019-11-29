@@ -8,6 +8,8 @@ router.route('/')
     .post(usersCtrl.createUser)
 
 router.route('/:id')
+    .get(usersCtrl.getUser)
+    .put(usersCtrl.updateUser)
     .delete(usersCtrl.deleteUser)
 
 
